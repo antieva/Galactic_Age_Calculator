@@ -39,8 +39,21 @@ describe('Date', function() {
 });
 
 describe('Date', function() {
-  it('should test whether function calculate how many years a user has left to live on each planet', function() {
+  it('should test whether function calculate how many years a user has left to live on the planet', function() {
     let leftYears = Date.calculateYearsLeft(69, 70);
     expect(Date.convertInPlanetAge(0.24, leftYears)).toEqual(4);
+  });
+});
+
+describe('Date', function() {
+  it('should test whether function calculate how many years a user overlived on the earth', function() {
+    expect(Date.calculateYearsOverLived(80,79)).toEqual(1);
+  });
+});
+
+describe('Date', function() {
+  it('should test whether function calculate how many years a user overlived on the planet', function() {
+    let years = Date.calculateYearsOverLived(80,79);
+    expect(Date.convertInPlanetAge(0.24, years)).toEqual(4);
   });
 });

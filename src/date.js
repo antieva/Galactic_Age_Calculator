@@ -25,5 +25,7 @@ export class Date {
     }
   }
 
-  
+  static calculateYearsOverLived(age, lifeExpectancy) {
+    return age - lifeExpectancy;
+  }
 }
