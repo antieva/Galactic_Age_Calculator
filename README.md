@@ -15,7 +15,13 @@ A web application that determines a user’s age based on a planet’s solar yea
     * deduct birth year from current year;
     * convert years into seconds.
 
+    * Example input: "05-23-2017", "05-25-2018";
+    * Example output: [31536000].
 
+
+* Calculate the age of a human in some planet years. Takes input age and that planet/earth years ratio, and returns this person age in that planet years.
+    * Example input: "0.24", "1";
+    * Example output: [4].
 
 ##Setup instructions:
 

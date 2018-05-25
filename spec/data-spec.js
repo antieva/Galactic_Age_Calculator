@@ -18,3 +18,9 @@ describe('Date', function() {
     expect(Date.calculateAge("05-23-2017", "05-25-2018")).toEqual(31536000);
   });
 });
+
+describe('Date', function() {
+  it('should test whether function calculate the age of a human in some planet years', function() {
+    expect(Date.somePlanetAge(0.24, 1)).toEqual(4);
+  });
+});

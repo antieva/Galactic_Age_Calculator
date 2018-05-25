@@ -13,4 +13,9 @@ export class Date {
 
     return age;
   }
+
+  static somePlanetAge(ratio, earthAge) {
+    let planetAge = Math.floor(earthAge/ratio);
+    return planetAge;
+  }
 }
