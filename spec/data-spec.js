@@ -14,13 +14,33 @@ describe('Date', function() {
 
 
 describe('Date', function() {
+  it('should test whether function calculate right age in years from given dates', function() {
+    expect(Date.calculateAge("05-23-2017", "05-25-2018")).toEqual(1);
+  });
+});
+
+describe('Date', function() {
   it('should test whether function calculate right age in seconds from given dates', function() {
-    expect(Date.calculateAge("05-23-2017", "05-25-2018")).toEqual(31536000);
+    let age = Date.calculateAge("05-23-2017", "05-25-2018");
+    expect(Date.ageInSeconds(age)).toEqual(31536000);
   });
 });
 
 describe('Date', function() {
   it('should test whether function calculate the age of a human in some planet years', function() {
-    expect(Date.somePlanetAge(0.24, 1)).toEqual(4);
+    expect(Date.convertInPlanetAge(0.24, 1)).toEqual(4);
+  });
+});
+
+describe('Date', function() {
+  it('should test whether function calculate how many years a user has left to live on earth', function() {
+    expect(Date.calculateYearsLeft(65, 70)).toEqual(5);
+  });
+});
+
+describe('Date', function() {
+  it('should test whether function calculate how many years a user has left to live on each planet', function() {
+    let leftYears = Date.calculateYearsLeft(69, 70);
+    expect(Date.convertInPlanetAge(0.24, leftYears)).toEqual(4);
   });
 });

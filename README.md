@@ -19,8 +19,12 @@ A web application that determines a user’s age based on a planet’s solar yea
     * Example output: [31536000].
 
 
-* Calculate the age of a human in some planet years. Takes input age and that planet/earth years ratio, and returns this person age in that planet years.
-    * Example input: "0.24", "1";
+* Calculate the age of a human in some planet years. Takes input age and that planet, and returns this person age in that planet years.
+    * Example input: "Mars", "1";
+    * Example output: [4].
+
+* Calculate how many years a user has left to live on each planet. Takes input age, life expectancy and choose a plaet, and returns this person years left to live on that planet.
+    * Example input: "69", "70", "Mars";
     * Example output: [4].
 
 ##Setup instructions:

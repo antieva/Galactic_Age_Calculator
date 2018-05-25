@@ -7,8 +7,16 @@ $(document).ready(function() {
     event.preventDefault();
     let db = $('#date1').val();
     let currentDate = $('#currentDate').val();
-    let output = Date.age(db, currentDate);
+    let earthAge = Date.calculateAge(db, currentDate);
+    let planet = parseInt($('#planet').val());
+    //let inputExpectacy = parseInt($('#lifeExpectancy').val());
 
-    $("#output").text(output);
+    let planetToErthRatios = [0.24,0.62,1.88,11.86];
+    let planetAge = Date.convertInPlanetAge(planetToErthRatios[planet], earthAge);
+    $("#planet-age").text(planetAge);
+
+    $("#output-age").text(earthAge);
+    $("#output-ageInSeconds").text(Date.ageInSeconds(earthAge));
+
   });
 });
