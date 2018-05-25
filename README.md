@@ -12,10 +12,8 @@ A web application that determines a user’s age based on a planet’s solar yea
 
 * Calculate age from two dates (birth date and current date) in seconds.
     * extract a year from each date;
-    * count how many leap years were in between;
-    * calculate how many seconds in those combined leap years;
-    * calculate how many seconds in non leap years;
-    * sum those seconds.
+    * deduct birth year from current year;
+    * convert years into seconds.
 
 
 
