@@ -1,31 +1,29 @@
 export class Date {
 
   static ageInSeconds(age) {
-    age = age * 365 * 86400;
+    const convertToSec = 365 * 86400;
+    age = age * convertToSec;
     return age;
   }
 
-  static calculateAge(date1, date2) {
+  static calculateAge(date1, date2, ratio) {
     let birthYear = parseInt(date1.slice(date1.length - 4, date1.length));
     let currentYear = parseInt(date2.slice(date2.length - 4, date2.length));
-    let age = (currentYear - birthYear);
+    let age = Math.floor((currentYear - birthYear)/ratio);
     return age;
   }
 
-  static convertInPlanetAge(ratio, earthAge) {
-    let planetAge = Math.floor(earthAge/ratio);
-    return planetAge;
-  }
-
-  static calculateYearsLeft(age, lifeExpectancy) {
+  static calculateYearsLeft(age, lifeExpectancy, ratio) {
     if (age < lifeExpectancy) {
-      return lifeExpectancy - age;
+      let yearsLeft = Math.floor((lifeExpectancy - age)/ratio)
+      return yearsLeft;
     } else {
       return -1;
     }
   }
 
-  static calculateYearsOverLived(age, lifeExpectancy) {
-    return age - lifeExpectancy;
+  static calculateYearsOverLived(age, lifeExpectancy, ratio) {
+    let years = Math.floor((age - lifeExpectancy)/ratio)
+    return years;
   }
 }
